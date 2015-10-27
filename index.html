@@ -27,15 +27,18 @@
   		position:relative;
   		height:100%;
   		width:100%;
-  		font-family: 'Helvetica', sans-serif;
+  		font-family: Tahoma, Geneva, sans-serif;
 	    font-weight: 300;
 	    font-size: 18pt;
+
+	    -webkit-animation: bgpulsate 8s ease-in-out;
+	    -webkit-animation-iteration-count: infinite; 
   	}
   	a{
   		text-decoration: none;
   		display:block;
   		height:2em;
-  		color: black;
+  		color:black;
   	}
   	a:hover{
   		font-weight: 600;
@@ -58,15 +61,21 @@
   	#links{
   		position: absolute;
   		bottom:0;
-  		height:33%;
+  		height:30%;
   		display:block;
   		width:100%;
   		text-align: center;
 	}
+
 	@-webkit-keyframes pulsate {
-	    0% {-webkit-transform: scale(0.9, 0.9); opacity: 0.4;}
+	    0% {-webkit-transform: scale(0.95, 0.85); opacity: 0.8;}
 	    50% {-webkit-transform: scale(1.0, 1.0); opacity: 1.0;}
-	    100% {-webkit-transform: scale(0.9, 0.9); opacity: 0.4;}
+	    100% {-webkit-transform: scale(0.95, 0.85); opacity: 0.8;}
+	}
+	@-webkit-keyframes bgpulsate {
+	    0% {background-color:#DDD;}
+	    50% {background-color:#FFF;}
+	    100% {background-color:#DDD;}
 	}
   </style>
 </head>
